@@ -4,8 +4,8 @@
             <title>Django Girls blog</title>
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-              <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+            <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         </head>
         <body>
             <div class="page-header">
@@ -20,7 +20,7 @@
                 <div class="post">
                 <p>published: {{ post.fecha_publicacion }}</p>
                 <h1><a href="">{{ post.titulo }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
+                    <p>{{ post.texto|linebreaksbr }}</p>
                 </div>
                 {% endfor %}
            </div>
