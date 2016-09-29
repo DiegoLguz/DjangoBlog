@@ -18,9 +18,9 @@
 
              {% for post in posts %}
                 <div class="post">
-                <p>published: {{ post.fecha_publicacion }}</p>
+                <p align = "">published: {{ post.fecha_publicacion }}</p>
                 <h1><a href="">{{ post.titulo }}</a></h1>
-                    <p>{{ post.texto|linebreaksbr }}</p>
+                <p align = "justify">{{ post.texto|linebreaksbr }}</p>
                 </div>
                 {% endfor %}
            </div>
