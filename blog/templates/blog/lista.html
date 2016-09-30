@@ -1,30 +1,13 @@
-{% load staticfiles %}
-<html>
-        <head>
-            <title>Diego's BLog</title>
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-            <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        </head>
-        <body>
-            <div class="page-header">
-                  <h1><a href="/">DiegoLGuz's Blog</a></h1>
-            </div>
-           
-      <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-
-             {% for post in posts %}
-                <div class="post">
-                <p align = "">published: {{ post.fecha_publicacion }}</p>
-                <h1><a href="">{{ post.titulo }}</a></h1>
-                <p align = "justify">{{ post.texto|linebreaksbr }}</p>
-                </div>
-                {% endfor %}
-           </div>
-          </div>
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for post in posts %}
+    <div class="post">
+        <div class="date">
+            <p align = "">published: {{ post.fecha_publicacion }}</p>
+            
         </div>
-        </body>
-    </html>
+            <h1><a href="">{{ post.titulo }}</a></h1>
+            <p align = "justify">{{ post.texto|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
